@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1079969592244",
+    "project_id": "pemilihanrt-4d4a2",
+    "storage_bucket": "pemilihanrt-4d4a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079969592244:android:35c0460f489c83638f38e1",
+        "android_client_info": {
+          "package_name": "com.alfit.pemilihan_rt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079969592244-omm13rtmf85or29or9hqdh8o3nc444rg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alfit.pemilihan_rt",
+            "certificate_hash": "e5ae15246db856136945c2742e8890f6566004c2"
+          }
+        },
+        {
+          "client_id": "1079969592244-7673dp1svnihn9c2bep5me3aatog7jrc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6WsmkrV9Y8pwcSMSFm8rtxjdbnCzvFNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079969592244-7673dp1svnihn9c2bep5me3aatog7jrc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
