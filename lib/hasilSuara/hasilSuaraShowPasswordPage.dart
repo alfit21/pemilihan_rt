@@ -62,7 +62,7 @@ class HasilSuaraShowPasswordPage extends StatelessWidget {
                             ),
                             ElevatedButton(
                                 onPressed: () {
-                                  if (hasilSuaraC.psw.text == '067') {
+                                  if (hasilSuaraC.psw.text == '068') {
                                     Get.focusScope.unfocus();
                                     hasilSuaraC.psw.text = '';
                                     Get.offAll(() => HasilSuaraPage());

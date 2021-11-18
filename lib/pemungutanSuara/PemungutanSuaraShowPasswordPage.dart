@@ -77,7 +77,7 @@ class PemungutanSuaraShowPasswordPage extends StatelessWidget {
                       ),
                       ElevatedButton(
                           onPressed: () {
-                            if (pemungutanSuaraC.psw.text == '067') {
+                            if (pemungutanSuaraC.psw.text == '068') {
                               Get.focusScope.unfocus();
                               pemungutanSuaraC.psw.text = '';
                               Get.offAll(() => PemungutanSuaraPage());
