@@ -83,72 +83,80 @@ class HomePage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(
-                              height: Get.height * 0.7,
-                              width: Get.width * 0.8,
-                              child: Card(
-                                color: Color(0XFFF0E3E3),
-                                child: Stack(
-                                  children: [
-                                    Align(
-                                      alignment: Alignment.center,
-                                      child: Lottie.asset(
-                                        'assets/lottie/kumpulanorangngobrol.json',
-                                        fit: BoxFit.cover,
-                                        height: double.infinity,
-                                        width: double.infinity,
-                                      ),
-                                    ),
-                                    Align(
-                                      alignment: Alignment.topCenter,
-                                      child: SizedBox(
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            StreamBuilder<QuerySnapshot>(
-                                              stream: homeC.jumlahPoin(),
-                                              builder: (context, snapshot) {
-                                                if (snapshot.connectionState ==
-                                                    ConnectionState.active) {
-                                                  var poin = snapshot.data.docs;
-                                                  Map<String, dynamic>
-                                                      dataPoin = poin[0].data();
-                                                  return Text(
-                                                    dataPoin['totalPoin']
-                                                        .toString(),
-                                                    style: GoogleFonts.arvo(
-                                                        textStyle: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                            fontSize: 80,
-                                                            color: Color(
-                                                                0XFF3F3351))),
-                                                  );
-                                                }
-                                                return Container();
-                                              },
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Text(
-                                              'Total Suara Pemilih',
-                                              style: GoogleFonts.arvo(
-                                                  textStyle: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 25,
-                                                      color:
-                                                          Color(0XFF3F3351))),
-                                            ),
-                                          ],
+                          Expanded(
+                            child: SizedBox(
+                                height: MediaQuery.of(context).size.width * 0.7,
+                                width: MediaQuery.of(context).size.width * 0.8,
+                                child: Card(
+                                  color: Color(0XFFF0E3E3),
+                                  child: Stack(
+                                    children: [
+                                      Align(
+                                        alignment: Alignment.center,
+                                        child: Container(
+                                          height: double.infinity,
+                                          width: double.infinity,
+                                          child: Lottie.asset(
+                                            'assets/lottie/kumpulanorangngobrol.json',
+                                            fit: BoxFit.cover,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              )),
+                                      Align(
+                                        alignment: Alignment.topCenter,
+                                        child: SizedBox(
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              StreamBuilder<QuerySnapshot>(
+                                                stream: homeC.jumlahPoin(),
+                                                builder: (context, snapshot) {
+                                                  if (snapshot
+                                                          .connectionState ==
+                                                      ConnectionState.active) {
+                                                    var poin =
+                                                        snapshot.data.docs;
+                                                    Map<String, dynamic>
+                                                        dataPoin =
+                                                        poin[0].data();
+                                                    return Text(
+                                                      dataPoin['totalPoin']
+                                                          .toString(),
+                                                      style: GoogleFonts.arvo(
+                                                          textStyle: TextStyle(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                              fontSize: 80,
+                                                              color: Color(
+                                                                  0XFF3F3351))),
+                                                    );
+                                                  }
+                                                  return Container();
+                                                },
+                                              ),
+                                              SizedBox(
+                                                width: 10,
+                                              ),
+                                              Text(
+                                                'Total Suara Pemilih',
+                                                style: GoogleFonts.arvo(
+                                                    textStyle: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 25,
+                                                        color:
+                                                            Color(0XFF3F3351))),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )),
+                          ),
                         ],
                       )),
                 )
