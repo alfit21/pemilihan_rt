@@ -65,7 +65,7 @@ class HasilSuaraShowPasswordPage extends StatelessWidget {
                                   if (hasilSuaraC.psw.text == '068') {
                                     Get.focusScope.unfocus();
                                     hasilSuaraC.psw.text = '';
-                                    Get.offAll(() => HasilSuaraPage());
+                                    Get.to(() => HasilSuaraPage());
                                   } else {
                                     Get.focusScope.unfocus();
                                     hasilSuaraC.psw.text = '';

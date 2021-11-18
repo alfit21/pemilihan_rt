@@ -80,16 +80,15 @@ class PemungutanSuaraShowPasswordPage extends StatelessWidget {
                             if (pemungutanSuaraC.psw.text == '068') {
                               Get.focusScope.unfocus();
                               pemungutanSuaraC.psw.text = '';
-                              Get.offAll(() => PemungutanSuaraPage());
+                              Get.to(() => PemungutanSuaraPage());
                             } else if (pemungutanSuaraC.psw.text == '111') {
                               Get.focusScope.unfocus();
                               pemungutanSuaraC.psw.text = '';
-                              Get.offAll(() => HomePage());
+                              Get.to(() => HomePage());
                             } else {
                               Get.focusScope.unfocus();
                               pemungutanSuaraC.psw.text = '';
-                              Get.offAll(
-                                  () => PemungutanSuaraShowPasswordPage());
+                              Get.to(() => PemungutanSuaraShowPasswordPage());
                               Get.defaultDialog(
                                   backgroundColor: Colors.cyan,
                                   title: 'Info',

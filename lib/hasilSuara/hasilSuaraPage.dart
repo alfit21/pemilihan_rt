@@ -19,13 +19,13 @@ class HasilSuaraPage extends StatelessWidget {
     final hasilSuaraC = Get.find<HasilSuaraController>();
     return WillPopScope(
       onWillPop: () async {
-        return Get.offAll(() => HomePage());
+        return Get.to(() => HomePage());
       },
       child: Scaffold(
         floatingActionButton: FloatingActionButton(
           backgroundColor: Color(0xffBDB8E3),
           onPressed: () {
-            Get.offAll(() => HomePage());
+            Get.to(() => HomePage());
           },
           child: Icon(
             Icons.arrow_back_ios_rounded,

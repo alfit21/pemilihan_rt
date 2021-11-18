@@ -2,7 +2,7 @@
     package="com.alfit.pemilihan_rt">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="pemilihan_rt"
+        android:label="Pemilihan RT"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
