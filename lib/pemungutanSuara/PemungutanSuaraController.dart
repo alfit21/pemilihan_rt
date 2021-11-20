@@ -11,20 +11,25 @@ class PemungutanSuaraController extends GetxController {
 
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-  kirimData(id, poin) async {
-    CollectionReference totalSuara = firestore.collection("poin");
-    DocumentReference calonRt = firestore.collection('calonRt').doc(id);
-
-    var data = await totalSuara.get();
-    var idPoin = data.docs[0].id;
-
-    DocumentReference editPoint = firestore.collection('poin').doc(idPoin);
-
-    int hasilSuara = data.docs[0]['totalPoin'] + 1;
+  kirimData(id) async {
+    DocumentReference editCalonRt = firestore.collection('calonRt').doc(id);
+// ambil poin calon rt
+    var dataCalonRt = await editCalonRt.get();
+    int poin = (dataCalonRt.data() as Map<String, dynamic>)['poin'];
+    // setelah dapat tambah 1
     int hasilPoint = poin + 1;
 
+    // ambil total suara
+    CollectionReference totalSuara = firestore.collection("poin");
+    var data = await totalSuara.get();
+    var idPoin = data.docs[0].id;
+// setelah dapat ditambah1
+    int hasilSuara = data.docs[0]['totalPoin'] + 1;
+// proses edit point
+    DocumentReference editPoint = firestore.collection('poin').doc(idPoin);
+
     try {
-      await calonRt.update({
+      await editCalonRt.update({
         "poin": hasilPoint,
       });
 

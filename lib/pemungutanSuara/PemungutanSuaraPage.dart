@@ -59,7 +59,8 @@ class PemungutanSuaraPage extends StatelessWidget {
                             return TextButton(
                               onPressed: () {
                                 pemungutanSuaraC.kirimData(
-                                    listAllDocs[index].id, data['poin']);
+                                  listAllDocs[index].id,
+                                );
                               },
                               child: SizedBox(
                                 width: 215,
